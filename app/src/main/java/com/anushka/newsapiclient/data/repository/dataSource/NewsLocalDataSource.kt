@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 interface NewsLocalDataSource {
     suspend fun saveArticleToDB(article: Article)
     fun getSavedArticle(): Flow<List<Article>>
-    fun deleteArticleFromDB(article: Article)
+    suspend fun deleteArticleFromDB(article: Article)
 }
